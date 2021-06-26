@@ -1,0 +1,203 @@
+@import "_config";
+
+/* ------------------------------------------------
+Header
+------------------------------------------------ */
+
+.header {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0 10%;
+    position: fixed;
+    top: 0;
+    transition: 0.4s;
+    z-index: 99;
+    &-logo {
+        width: 200px;
+        margin: 0;
+        a img {
+            width: 100%;
+        }
+    }
+
+    nav {
+        ul {
+            display: flex;
+            li {
+                list-style: none;
+                padding: 0 10px;
+                margin: 0 5px;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
+.bg-base {
+    background-color: $color-base;
+}
+
+/* ------------------------------------------------
+TopView
+------------------------------------------------ */
+
+.top {
+    min-height: 100vh;
+    background: url(../img/bg-top.jpg);
+    background-size: cover;
+    background-blend-mode: multiply;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::before {
+        position: absolute;
+        content: "";
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(202, 183, 36, 0.2);
+        mix-blend-mode: multiply;
+    }
+    &_h2 {
+    }
+}
+
+/* ------------------------------------------------
+Introducion
+------------------------------------------------ */
+
+.introduction {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+
+/* ------------------------------------------------
+Skill
+------------------------------------------------ */
+
+.skill {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: $color-bg;
+    h2,
+    h3 {
+        color: #fff;
+    }
+    h3 {
+        padding-top: 30px;
+    }
+    table {
+        color: #fff;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: none;
+        width: 70%;
+        margin: 0 auto;
+        tr,
+        td {
+            text-align: center;
+            width: calc(100% / 3);
+            padding: 15px 0;
+            border: none;
+        }
+        tr {
+            cursor: pointer;
+            transition: 0.4s;
+            th {
+                border: none;
+                font-weight: normal;
+            }
+            td {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* ------------------------------------------------
+Achievement
+------------------------------------------------ */
+
+.achievement {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    &-note {
+        font-size: 14px;
+        color: $text_underbar;
+    }
+    &-content {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 0 auto;
+        &-one {
+            width: calc((100% - 90px) / 3);
+            padding: 15px;
+            img {
+                width: 80%;
+            }
+            p {
+                margin: 20px 0;
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+/* ------------------------------------------------
+Contact
+------------------------------------------------ */
+
+.contact {
+    text-align: center;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    background-color: $color-bg;
+    h2 {
+        color: #fff;
+    }
+    &-div {
+        padding-top: 50px;
+        &-twitter {
+            width: 30px;
+            padding-bottom: 30px;
+            display: block;
+            margin: 0 auto;
+            img {
+                width: 100%;
+            }
+        }
+        &-mail {
+            color: #fff;
+            text-decoration: none;
+        }
+    }
+}
+
+/* ------------------------------------------------
+Footer
+------------------------------------------------ */
+
+.footer {
+    background-color: $color-base;
+
+    &-sns {
+    }
+    &-copyright {
+        text-align: center;
+        color: #fff;
+        padding: 10px 0;
+        margin: 0;
+    }
+}
