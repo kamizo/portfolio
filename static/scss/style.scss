@@ -15,6 +15,9 @@ Header
     top: 0;
     transition: 0.4s;
     z-index: 99;
+    @include mq(sm) {
+        display: none;
+    }
     &-logo {
         width: 200px;
         margin: 0;
@@ -63,10 +66,20 @@ TopView
         height: 100vh;
         top: 0;
         left: 0;
-        background-color: rgba(202, 183, 36, 0.2);
+        background-color: rgba(202, 183, 36, 0.3);
         mix-blend-mode: multiply;
     }
     &_h2 {
+        color: #fff;
+        @include font-size(80);
+        line-height: 1.1;
+        text-decoration: none;
+        display: block;
+        mix-blend-mode: overlay;
+        text-shadow: 0px 8px 9px #511d0e, 0px -2px 1px #fff;
+        @include mq(sm) {
+            @include font-size(40);
+        }
     }
 }
 
@@ -188,6 +201,32 @@ Contact
 /* ------------------------------------------------
 Footer
 ------------------------------------------------ */
+
+.footer-nav {
+    display: none;
+    @include mq(sm) {
+        display: block;
+        position: sticky;
+        bottom: 0;
+        padding: 0 10px;
+        background-color: $color-base;
+        ul {
+            display: flex;
+            margin: 0;
+            li {
+                list-style: none;
+                padding: 20px 0;
+                width: 25%;
+                text-align: center;
+                a {
+                    text-decoration: none;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
 
 .footer {
     background-color: $color-base;

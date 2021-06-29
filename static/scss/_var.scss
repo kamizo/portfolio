@@ -1,3 +1,47 @@
+/*======================================================
+ * Config
+ *======================================================*/
+
+// variable
+
 $text_underbar: #6b6b6c;
 $color-base: #57aca0;
 $color-bg: #616564;
+
+// breakpoint記述
+// @include mq(sp){width:100%;}
+
+$bp-sm: 560px !default;
+$bp-md: 960px !default;
+
+@mixin mq($DEVICE) {
+    @if $DEVICE == "sm" {
+        @media (max-width: $bp-sm) {
+            @content;
+        }
+    }
+
+    @if $DEVICE == "sp" {
+        @media (min-width: $bp-sm + 1) {
+            @content;
+        }
+    }
+
+    @if $DEVICE == "pc" {
+        @media (min-width: $bp-md + 1) {
+            @content;
+        }
+    }
+}
+
+/*======================================================
+ * Macro
+ *======================================================*/
+
+// font size
+
+$fontDefaultSize: 16;
+
+@mixin font-size($size, $base: $fontDefaultSize) {
+    font-size: $size / $base + rem;
+}
