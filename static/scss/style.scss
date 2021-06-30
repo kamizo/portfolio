@@ -89,8 +89,11 @@ Introducion
 
 .introduction {
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 80px 0;
+    @include mq(sm) {
+        padding: 60px 20px;
+        text-align: left;
+    }
 }
 
 /* ------------------------------------------------
@@ -99,8 +102,7 @@ Skill
 
 .skill {
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 80px 0;
     background-color: $color-bg;
     h2,
     h3 {
@@ -135,6 +137,12 @@ Skill
             }
         }
     }
+    @include mq(sm) {
+        padding: 60px 20px;
+        table {
+            width: 100%;
+        }
+    }
 }
 
 /* ------------------------------------------------
@@ -143,8 +151,7 @@ Achievement
 
 .achievement {
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 80px 0;
     &-note {
         font-size: 14px;
         color: $text_underbar;
@@ -166,6 +173,27 @@ Achievement
             }
         }
     }
+    @include mq(sm) {
+        padding: 60px 20px;
+        &-content {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            margin: 0 auto;
+            &-one {
+                width: 50%;
+                padding: 0 15px;
+                margin-top: 30px;
+                img {
+                    width: 80%;
+                }
+                p {
+                    margin-top: 30px;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
 }
 
 /* ------------------------------------------------
@@ -174,8 +202,7 @@ Contact
 
 .contact {
     text-align: center;
-    padding-top: 150px;
-    padding-bottom: 150px;
+    padding: 80px 0;
     background-color: $color-bg;
     h2 {
         color: #fff;
@@ -194,6 +221,15 @@ Contact
         &-mail {
             color: #fff;
             text-decoration: none;
+        }
+    }
+    @include mq(sm) {
+        padding: 60px 20px;
+        &-div {
+            padding-top: 20px;
+            &-twitter {
+                padding-bottom: 20px;
+            }
         }
     }
 }
@@ -230,7 +266,6 @@ Footer
 
 .footer {
     background-color: $color-base;
-
     &-sns {
     }
     &-copyright {
