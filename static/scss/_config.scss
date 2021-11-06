@@ -1,5 +1,9 @@
 @import "_var";
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1,
 h2 {
     text-align: center;
