@@ -239,11 +239,12 @@ Contact
     h2 {
         color: #fff;
     }
-    p {
-        color: #fff;
-    }
+
     &-div {
         padding-top: 50px;
+        p {
+            color: #fff;
+        }
         &-twitter {
             width: 30px;
             padding-bottom: 30px;
