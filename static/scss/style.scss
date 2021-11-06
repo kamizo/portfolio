@@ -16,7 +16,9 @@ Header
     transition: 0.4s;
     z-index: 99;
     @include mq(sm) {
+        background-color: $color-base;
         display: block;
+        padding: 0 20px;
         position: absolute;
         top: 0;
         left: 0;
@@ -24,15 +26,15 @@ Header
     &-logo {
         width: 200px;
         margin: 0;
-        @include mq(sm) {
-            margin: 0 auto;
-        }
         a img {
             width: 100%;
         }
     }
 
     nav {
+        @include mq(sm) {
+            display: none;
+        }
         ul {
             display: flex;
             li {
@@ -72,6 +74,7 @@ TopView
     align-items: center;
     position: fixed;
     top: 0;
+    z-index: 999;
     &_h1 {
         @include font-size(80);
         line-height: 1.1;
@@ -90,7 +93,37 @@ Introducion
 
 .introduction {
     text-align: center;
-    padding: 70px 0;
+    padding: 90px 0 70px;
+
+    &-contents {
+        display: block;
+        padding-top: 30px;
+        @include mq(sp) {
+            display: flex;
+        }
+        img {
+            display: block;
+            width: 30%;
+            margin: 0 auto;
+            @include mq(sp) {
+                width: 50%;
+                margin: 0;
+            }
+            @include mq(pc) {
+                width: 30%;
+                margin: 0 10%;
+            }
+        }
+        &-text {
+            width: 100%;
+            padding: 0 30px;
+            @include mq(sp) {
+                width: 50%;
+                padding: 0 30px;
+            }
+        }
+    }
+
     @include mq(sm) {
         padding: 60px 20px;
         text-align: left;
@@ -242,6 +275,30 @@ Footer
 .footer {
     background-color: $color-base;
     &-sns {
+    }
+    &-nav {
+        position: sticky;
+        bottom: 0;
+        background-color: $color-base;
+        @include mq(sp) {
+            display: none;
+        }
+        ul {
+            display: flex;
+            justify-content: space-evenly;
+            margin: 0;
+            li {
+                list-style: none;
+                padding: 10px 0;
+                a {
+                    text-decoration: none;
+                    font-weight: bold;
+                    img {
+                        width: 30px;
+                    }
+                }
+            }
+        }
     }
     &-copyright {
         text-align: center;

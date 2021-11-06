@@ -36,11 +36,18 @@
 
     <section class="introduction" id="introduction">
         <h2>自己紹介</h2>
-        <p>KamizO。ポートフォリオにお越しいただきありがとうございます。</p>
-        <p>はじめましてKamizO。です。</p>
-        <p>学生時代に友人と起業後、北海道のIT企業に就職し、インフラ・バックエンドを中心にフルスタックエンジニアをしておりました。</p>
-        <p>Webサイト制作、Webアプリ開発の両方の経験を活かして、クライアント様のビジネスプランに合ったご提案ができるかと思います。</p>
-        <p>趣味でいろいろな資格の勉強をしており、FPや簿記などの資格を持っております。現在は宅建の勉強中。</p>
+        <div class="introduction-contents">
+            <img src="./static/img/kamizo.png" alt="KamizO。">
+            <div class="introduction-contents-text">
+                <p>KamizO。ポートフォリオにお越しいただきありがとうございます。</p>
+                <p>はじめましてKamizO。です。</p>
+                <p>学生時代に友人と起業後、IT企業に就職し、インフラ・バックエンドを中心にフルスタックエンジニアをしておりました。</p>
+                <p>Webサイト制作、Webアプリ開発の両方の経験を活かして、クライアント様のビジネスプランに合ったご提案ができます！</p>
+                <p>趣味でいろいろな資格の勉強をしており、FPや簿記などの資格を持っております。現在は宅建の勉強中。</p>
+            </div>
+        </div>
+
+
     </section>
 
     <section class="skill" id="skill">
@@ -141,12 +148,22 @@
     <section class="contact" id="contact">
         <h2>連絡先</h2>
         <div class="contact-div">
-            <a href="" class="contact-div-twitter"><img src="./static/img/twitter_w.svg" alt="KamizO。Twitter"></a>
+            <p>お仕事のご依頼はツイッターのDMもしくは下記メールアドレスまでご連絡下さい。</p>
+            <a href="https://twitter.com/kamiz_o" class="contact-div-twitter"><img src="./static/img/twitter_w.svg"
+                    alt="KamizO。Twitter"></a>
             <a href="mailto:kamizo1004@gmail.com" class="contact-div-mail">kamizo1004@gmail.com</a>
         </div>
     </section>
-
+    <nav class="footer-nav">
+        <ul>
+            <li><a href="#introduction"><img src="./static/img/icon_introduction.svg" alt=""></a></li>
+            <li><a href="#skill"><img src="./static/img/icon_skill.svg" alt=""></a></li>
+            <li><a href="#achievement"><img src="./static/img/icon_achievement.svg" alt=""></a></li>
+            <li><a href="#contact"><img src="./static/img/icon_contact.svg" alt=""></a></li>
+        </ul>
+    </nav>
     <footer class="footer">
+
         <div class="footer-sns">
 
         </div>
@@ -181,7 +198,7 @@
                 }, sec * 1000);
                 return objDef.promise();
             };
-            wait(3).done(function (index) {
+            wait(3).done(function () {
                 top.fadeOut(1000);;
             });
 
