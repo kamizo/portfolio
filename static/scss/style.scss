@@ -206,6 +206,17 @@ Achievement
                 margin: 20px 0;
                 font-weight: bold;
             }
+            a {
+                display: block;
+                margin: 20px 0;
+                font-weight: bold;
+                text-decoration: none;
+                color: black;
+                &:hover {
+                    color: black;
+                    cursor: pointer;
+                }
+            }
         }
     }
     @include mq(sm) {
