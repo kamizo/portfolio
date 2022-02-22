@@ -1,6 +1,23 @@
 @import "_config";
 
 /* ------------------------------------------------
+Common
+------------------------------------------------ */
+section {
+    &:nth-of-type(even) {
+        background-color: #fff;
+    }
+    &:nth-of-type(odd) {
+        background-color: $color-bg;
+        color: #fff;
+    }
+    &:first-of-type {
+        background-color: #fff;
+        color: #000;
+    }
+}
+
+/* ------------------------------------------------
 Header
 ------------------------------------------------ */
 
@@ -67,7 +84,6 @@ TopView
 .top {
     height: 100vh;
     width: 100vw;
-    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -138,16 +154,13 @@ Skill
 .skill {
     text-align: center;
     padding: 70px 0;
-    background-color: $color-bg;
-    h2,
-    h3 {
-        color: #fff;
+    h2 {
+        text-decoration: underline #fff;
     }
     h3 {
         padding-top: 30px;
     }
     table {
-        color: #fff;
         border-collapse: collapse;
         border-spacing: 0;
         border: none;
@@ -161,7 +174,6 @@ Skill
             border: none;
         }
         tr {
-            cursor: pointer;
             transition: 0.4s;
             th {
                 border: none;
@@ -243,22 +255,68 @@ Achievement
 }
 
 /* ------------------------------------------------
+Work
+------------------------------------------------ */
+
+.work {
+    text-align: center;
+    padding: 70px 0;
+    h2 {
+        text-decoration: underline #fff;
+        margin-bottom: 20px;
+    }
+    h3 {
+        padding-top: 30px;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        border: none;
+        width: 70%;
+        margin: 0 auto;
+        tr,
+        td {
+            text-align: center;
+            width: calc(100% / 3);
+            padding: 15px 0;
+            border: none;
+        }
+        tr {
+            th {
+                border: none;
+                font-weight: normal;
+            }
+            td {
+                font-weight: bold;
+            }
+        }
+    }
+    p {
+        width: 70%;
+        margin: 0 auto;
+        text-align: left;
+    }
+    @include mq(sm) {
+        padding: 60px 20px;
+        table {
+            width: 100%;
+        }
+        p {
+            width: 100%;
+        }
+    }
+}
+
+/* ------------------------------------------------
 Contact
 ------------------------------------------------ */
 
 .contact {
     text-align: center;
     padding: 70px 0;
-    background-color: $color-bg;
-    h2 {
-        color: #fff;
-    }
 
     &-div {
-        padding-top: 50px;
-        p {
-            color: #fff;
-        }
+        padding-top: 20px;
         &-twitter {
             width: 30px;
             padding-bottom: 30px;
@@ -269,14 +327,13 @@ Contact
             }
         }
         &-mail {
-            color: #fff;
+            color: #000;
             text-decoration: none;
         }
     }
     @include mq(sm) {
         padding: 60px 20px;
         &-div {
-            padding-top: 20px;
             &-twitter {
                 padding-bottom: 20px;
             }
@@ -290,8 +347,6 @@ Footer
 
 .footer {
     background-color: $color-base;
-    &-sns {
-    }
     &-nav {
         position: sticky;
         bottom: 0;
